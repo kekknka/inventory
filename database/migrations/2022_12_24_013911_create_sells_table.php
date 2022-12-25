@@ -13,8 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('operations', function (Blueprint $table) {
+        Schema::create('sells', function (Blueprint $table) {
             $table->id();
+            $table->double('subtotal', 10 , 2);
+            $table->double('discount', 10, 2);
+            $table->double('total', 10, 2);
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }
@@ -26,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('operations');
+        Schema::dropIfExists('sells');
     }
 };

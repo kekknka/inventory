@@ -2,18 +2,19 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Kirschbaum\PowerJoins\PowerJoins;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Product extends Model
 {
-    use HasFactory;
+    use HasFactory, PowerJoins;
     protected $fillable = [
         'SKU',
         'name',
         'description',
         'inventory_min',
-        'price_int',
+        'price_in',
         'price_out',
         'unit',
         'presentation',
