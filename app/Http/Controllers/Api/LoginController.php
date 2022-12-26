@@ -14,12 +14,14 @@ class LoginController extends Controller
         if(Auth::attempt(['email' => $request->email, 'password' => $request->password])){
             return response()->json([
                 'token' => $request->user()->createToken($request->name)->plainTextToken,
-                'message' => 'Success'
+                'message' => 'Success',
+                'code' => '128'
             ]);
         }
 
         return response()->json([
-                   'message' => 'Invalid credentials'
+                   'message' => 'Invalid credentials',
+                   'code' => '124'
         ], 401);
     }
 
