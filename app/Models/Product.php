@@ -5,10 +5,11 @@ namespace App\Models;
 use Kirschbaum\PowerJoins\PowerJoins;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Product extends Model
 {
-    use HasFactory, PowerJoins;
+    use HasFactory, PowerJoins, SoftDeletes;
     protected $fillable = [
         'SKU',
         'name',
@@ -18,7 +19,6 @@ class Product extends Model
         'price_out',
         'unit',
         'presentation',
-        'active',
         'user_id'
     ];
 

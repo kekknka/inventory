@@ -20,6 +20,7 @@ class ProductController extends Controller
 
         $products = Product::select('products.*', 'users.name AS user_name')
             ->joinRelationship('user')
+            ->withTrashed()
             ->latest()
             ->paginate();
 
@@ -81,7 +82,29 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //dd($request->all());
+        try {
+            Product::whereId($id)->update($request->all());
+
+            return response()->json([
+               'message' => 'Product updated'
+            ]);
+
+        } catch (\Throwable $th) {
+            $code = $th->getCode();
+            if($code == '42S22'){
+                return response()->json([
+                   'message' => 'Params structure incorrect'
+                ]);
+            }elseif($code == '22007'){
+                return response()->json([
+                   'message' => 'Data not found, record no exist'
+                ], 401);
+            }
+            return response()->json([
+               'message' => 'Unexpected error'
+            ]);
+        }
     }
 
     /**
@@ -92,7 +115,11 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Product::findOrFail($id)->delete();
+
+        return response()->json([
+           'message' => 'Product deleted'
+        ]);
     }
 
     public function validateRequest(Request $request){
@@ -108,6 +135,5 @@ class ProductController extends Controller
             'active'        => 'required',
             'user_id'       => 'required'
         ]);
-        //return $request->validate();
     }
 }

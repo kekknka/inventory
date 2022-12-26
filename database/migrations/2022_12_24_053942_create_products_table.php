@@ -23,10 +23,10 @@ return new class extends Migration
             $table->float('price_out', 10, 2);
             $table->string('unit', 255);
             $table->string('presentation', 255);
-            $table->tinyInteger('active');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

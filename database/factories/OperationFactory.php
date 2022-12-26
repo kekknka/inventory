@@ -17,7 +17,10 @@ class OperationFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'quantity' => rand(2, 10),
+            'product_id' => rand(1, 20),
+            'order_id' => rand(1, 3),
+            'operation_type_id' => rand(1, 2)
         ];
     }
 }

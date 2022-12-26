@@ -17,7 +17,8 @@ class OperationTypeFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'type' => fake()->randomElement(['in', 'out']),
+            'description' => fake()->text()
         ];
     }
 }

@@ -17,7 +17,10 @@ class OrderFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'subtotal' => 0.00,
+            'discount' => 0.00,
+            'total' => 0.00,
+            'user_id' => rand(1,10)
         ];
     }
 }

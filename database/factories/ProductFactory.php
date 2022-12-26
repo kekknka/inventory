@@ -25,7 +25,6 @@ class ProductFactory extends Factory
             'price_out' => fake()->randomFloat(2, 1000, 2000),
             'unit' => fake()->randomElement(['Kg', 'Mg', 'L', 'ml']),
             'presentation' => fake()->randomElement(['Bolsa', 'Caja', 'Botella']),
-            'active' => 1,
             'user_id' => rand(1, 10),
         ];
     }
