@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
 
 class DashboardMiggleware
@@ -16,6 +17,7 @@ class DashboardMiggleware
      */
     public function handle(Request $request, Closure $next)
     {
+        //dd(Session()->all());
         if(Session()->has('user') == false){
             return redirect()->route('login');
         }

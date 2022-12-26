@@ -1,80 +1,85 @@
-
 <!DOCTYPE html>
-<html class="h-100" lang="en">
+<html lang="en">
 
 <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>{{ config('app.name') }}</title>
-    <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon.png">
-    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>CelestialUI Admin</title>
+    <!-- base:css -->
     @vite([
-        'resources/css/style.css'
+    'resources/plugins/typicons.font/font/typicons.css',
+    'resources/plugins/css/vendor.bundle.base.css',
+    'resources/css/vertical-layout-light/style.css'
     ])
-
+    <!-- endinject -->
+    <link rel="shortcut icon" href="../../images/favicon.png" />
 </head>
 
-<body class="h-100">
-
-    <!--*******************
-        Preloader start
-    ********************-->
-    <div id="preloader">
-        <div class="loader">
-            <svg class="circular" viewBox="25 25 50 50">
-                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10" />
-            </svg>
-        </div>
-    </div>
-    <!--*******************
-        Preloader end
-    ********************-->
-
-    <div class="login-form-bg h-100">
-        <div class="container h-100">
-            <div class="row justify-content-center h-100">
-                <div class="col-xl-6">
-                    <div class="form-input-content">
-                        <div class="card login-form mb-0">
-                            <div class="card-body pt-5">
-                                <a class="text-center" href="index.html"> <h4>Log In</h4></a>
-
-                                <form method="POST" action="{{ route('log_in') }}" class="mt-5 mb-5 login-input">
-                                    @csrf
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" name="email" placeholder="Email">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="password" class="form-control" name="password" placeholder="Password">
-                                    </div>
-                                    <button type="submit" class="btn login-form__btn submit w-100">Sign In</button>
-                                </form>
+<body>
+    <div class="container-scroller">
+        <div class="container-fluid page-body-wrapper full-page-wrapper">
+            <div class="content-wrapper d-flex align-items-center auth px-0">
+                <div class="row w-100 mx-0">
+                    <div class="col-lg-4 mx-auto">
+                        <div class="auth-form-light text-left py-5 px-4 px-sm-5">
+                            <div class="brand-logo">
+                                <img src="../../images/logo.svg" alt="logo">
                             </div>
+                            <h4>Hello! let's get started</h4>
+                            <h6 class="font-weight-light">Sign in to continue.</h6>
+                            <form method="POST" action="{{ route('log_in') }}" class="pt-3">
+                                @csrf
+                                <div class="form-group">
+                                    <input type="email" class="form-control form-control-lg" name="email" id="exampleInputEmail1"
+                                        placeholder="Username">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control form-control-lg" name="password"
+                                        id="exampleInputPassword1" placeholder="Password">
+                                </div>
+                                <div class="mt-3">
+                                    <button class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" type="submit">SING IN</button>
+
+                                </div>
+                                <div class="my-2 d-flex justify-content-between align-items-center">
+                                    <div class="form-check">
+                                        <label class="form-check-label text-muted">
+                                            <input type="checkbox" class="form-check-input">
+                                            Keep me signed in
+                                        </label>
+                                    </div>
+                                    <a href="#" class="auth-link text-black">Forgot password?</a>
+                                </div>
+                                <div class="mb-2">
+                                    <button type="button" class="btn btn-block btn-facebook auth-form-btn">
+                                        <i class="typcn typcn-social-facebook-circular mr-2"></i>Connect using facebook
+                                    </button>
+                                </div>
+                                <div class="text-center mt-4 font-weight-light">
+                                    Don't have an account? <a href="register.html" class="text-primary">Create</a>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- content-wrapper ends -->
         </div>
+        <!-- page-body-wrapper ends -->
     </div>
+    <!-- container-scroller -->
+    <!-- base:js -->
 
-
-    <!--**********************************
-        Scripts
-    ***********************************-->
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     @vite([
-        'resources/js/plugins/common/common.min.js',
-        'resources/js/custom.min.js',
-        'resources/js/settings.js',
-        'resources/js/gleek.js',
-        'resources/js/styleSwitcher.js'
+    'resources/plugins/js/vendor.bundle.base.js',
+    'resources/js/off-canvas.js',
+    'resources/js/hoverable-collapse.js',
+    'resources/js/template.js',
+    'resources/js/settings.js',
+    'resources/js/todolist.js',
     ])
+    <!-- endinject -->
 </body>
+
 </html>
-
-
-
-
-

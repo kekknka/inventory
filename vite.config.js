@@ -5,14 +5,18 @@ export default defineConfig({
     plugins: [
         laravel({
             input: [
-                'resources/scss/app.scss',
-                'resources/js/app.js',
-                'resources/css/style.css',
-                'resources/js/plugins/common/common.min.js',
-                'resources/js/custom.min.js',
+                'resources/plugins/typicons.font/font/typicons.css',
+                'resources/plugins/css/vendor.bundle.base.css',
+                'resources/css/vertical-layout-light/style.css',
+                'resources/plugins/js/vendor.bundle.base.js',
+                'resources/js/off-canvas.js',
+                'resources/js/hoverable-collapse.js',
+                'resources/js/template.js',
                 'resources/js/settings.js',
-                'resources/js/gleek.js',
-                'resources/js/styleSwitcher.js'
+                'resources/js/todolist.js',
+                'resources/plugins/progressbar.js/progressbar.min.js',
+                'resources/plugins/chart.js/Chart.min.js',
+                'resources/js/dashboard.js'
             ],
             refresh: true,
         }),

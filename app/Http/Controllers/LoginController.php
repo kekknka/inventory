@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 
@@ -17,7 +18,7 @@ class LoginController extends Controller
         $data = json_decode($response->body());
 
         if($data->code == "128"){
-            Session('user', ['user' => [
+            Session(['user' => [
                 'token' => $data->token
             ]]);
             return redirect()->route('dashboard');
