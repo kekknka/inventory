@@ -37,7 +37,7 @@ class OrderController extends Controller
         ->join('operation_types', 'operation_types.id', '=' ,'operations.operation_type_id')
         ->groupBy('operations.id')
         ->orderBy('operations.id', 'DESC')
-        ->paginate();
+        ->paginate(10);
 
         return OrderResource::collection($result);
 
@@ -51,7 +51,7 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-
+        //dd($request->order);
 
         DB::beginTransaction(); // Iniciamos transaccion
         try {
@@ -120,10 +120,10 @@ class OrderController extends Controller
         ->orWhere('products.name', $item)
         ->groupBy('operations.id')
         ->orderBy('operations.id', 'DESC')
-        ->get()
-        ->toArray();
+        ->paginate(10);
 
-        return response()->json($result);
+
+        return OrderResource::collection($result);
     }
 
     /**

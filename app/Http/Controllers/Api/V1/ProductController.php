@@ -15,16 +15,41 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
 
-        $products = Product::select('products.*', 'users.name AS user_name')
+        if(!$request->paginate){
+            $products = Product::select('products.*', 'users.name AS user_name')
             ->joinRelationship('user')
             ->withTrashed()
             ->latest()
             ->paginate();
 
-        return ProductResource::collection($products);
+            return ProductResource::collection($products);
+
+        }else{
+
+            if($request->paginate == "true"){
+                $products = Product::select('products.*', 'users.name AS user_name')
+                ->joinRelationship('user')
+                ->withTrashed()
+                ->latest()
+                ->paginate();
+
+                return ProductResource::collection($products);
+
+            }else{
+                $products = Product::select('products.*', 'users.name AS user_name')
+                ->joinRelationship('user')
+                ->withTrashed()
+                ->latest()
+                ->get();
+
+                return  ProductResource::collection($products);
+
+            }
+
+        }
 
     }
 

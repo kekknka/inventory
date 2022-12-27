@@ -31,6 +31,6 @@ class DatabaseSeeder extends Seeder
             'description' => ''
         ]);
         Order::factory(3)->create();
-        Operation::factory(20)->create();
+        Operation::factory(100)->create();
     }
 }

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\PublicController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\DashboardController;
 
 /*
@@ -27,4 +28,8 @@ Route::middleware(['token'])->group(function(){
     Route::get('logout', [LoginController::class, 'logout'])->name('logout');
 
     Route::get('orders', [OrderController::class, 'orders'])->name('order.get');
+    Route::get('orders_search', [OrderController::class, 'ordersProduct'])->name('order.search');
+    Route::post('orders_save', [OrderController::class, 'saveOrder'])->name('order.save');
+
+    Route::get('products', [ProductController::class, 'products'])->name('product.get');
 });
