@@ -10,6 +10,7 @@
     @vite([
     'resources/css/vertical-layout-light/style.css'
     ])
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.13.1/datatables.min.css"/>
     <!-- endinject -->
     <link rel="shortcut icon" href="images/favicon.png" />
 </head>
@@ -36,6 +37,8 @@
         'resources/js/todolist.js',
     ])
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.13.1/datatables.min.js"></script>
+    @stack('js')
 </body>
 
 </html>
