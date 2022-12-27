@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>CelestialUI Admin</title>
+    <title>{{ config('app.name') }} [login]</title>
     <!-- base:css -->
     @vite([
     'resources/plugins/typicons.font/font/typicons.css',
@@ -24,40 +24,23 @@
                     <div class="col-lg-4 mx-auto">
                         <div class="auth-form-light text-left py-5 px-4 px-sm-5">
                             <div class="brand-logo">
-                                <img src="../../images/logo.svg" alt="logo">
+                                <img src="https://via.placeholder.com/310x150?text=Logo" alt="logo">
                             </div>
-                            <h4>Hello! let's get started</h4>
-                            <h6 class="font-weight-light">Sign in to continue.</h6>
+                            <h4>¡Hola! empecemos</h4>
+                            <h6 class="font-weight-light">Inicia sesión para continuar.</h6>
                             <form method="POST" action="{{ route('log_in') }}" class="pt-3">
                                 @csrf
                                 <div class="form-group">
                                     <input type="email" class="form-control form-control-lg" name="email" id="exampleInputEmail1"
-                                        placeholder="Username">
+                                        placeholder="Usuario" required>
                                 </div>
                                 <div class="form-group">
                                     <input type="password" class="form-control form-control-lg" name="password"
-                                        id="exampleInputPassword1" placeholder="Password">
+                                        id="exampleInputPassword1" placeholder="Contraseña" required>
                                 </div>
                                 <div class="mt-3">
-                                    <button class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" type="submit">SING IN</button>
+                                    <button class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" type="submit">INICIAR SESIÓN</button>
 
-                                </div>
-                                <div class="my-2 d-flex justify-content-between align-items-center">
-                                    <div class="form-check">
-                                        <label class="form-check-label text-muted">
-                                            <input type="checkbox" class="form-check-input">
-                                            Keep me signed in
-                                        </label>
-                                    </div>
-                                    <a href="#" class="auth-link text-black">Forgot password?</a>
-                                </div>
-                                <div class="mb-2">
-                                    <button type="button" class="btn btn-block btn-facebook auth-form-btn">
-                                        <i class="typcn typcn-social-facebook-circular mr-2"></i>Connect using facebook
-                                    </button>
-                                </div>
-                                <div class="text-center mt-4 font-weight-light">
-                                    Don't have an account? <a href="register.html" class="text-primary">Create</a>
                                 </div>
                             </form>
                         </div>
@@ -70,10 +53,9 @@
     </div>
     <!-- container-scroller -->
     <!-- base:js -->
-
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     @vite([
     'resources/plugins/js/vendor.bundle.base.js',
-    'resources/js/off-canvas.js',
     'resources/js/hoverable-collapse.js',
     'resources/js/template.js',
     'resources/js/settings.js',

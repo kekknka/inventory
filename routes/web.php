@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\PublicController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\PublicController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,4 +24,7 @@ Route::post('log_in', [LoginController::class, 'login'])->name('log_in');
 
 Route::middleware(['token'])->group(function(){
     Route::get('dashboard', [DashboardController::class, 'home'])->name('dashboard');
+    Route::get('logout', [LoginController::class, 'logout'])->name('logout');
+
+    Route::get('orders', [OrderController::class, 'orders'])->name('order.get');
 });

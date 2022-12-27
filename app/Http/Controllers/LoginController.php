@@ -19,7 +19,9 @@ class LoginController extends Controller
 
         if($data->code == "128"){
             Session(['user' => [
-                'token' => $data->token
+                'token' => $data->token,
+                'id' => $data->id,
+                'username' => $data->username,
             ]]);
             return redirect()->route('dashboard');
         }
@@ -27,5 +29,10 @@ class LoginController extends Controller
         return redirect()->back();
 
 
+    }
+
+    public function logout(){
+        Session()->forget('user');
+        return redirect()->route('login');
     }
 }
