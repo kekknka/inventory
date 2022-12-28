@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use datatables;
-use RealRashid\SweetAlert\Facades\Alert as Alert;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
+use RealRashid\SweetAlert\Facades\Alert as Alert;
 
 class OrderController extends Controller
 {
@@ -16,31 +17,21 @@ class OrderController extends Controller
     }
 
     public function orders(Request $request){
-        if(!$request->page){
-            $request = Request::create($this->api_site . '/api/v1/orders', 'GET');
-        }else{
-            $request = Request::create($this->api_site . '/api/v1/orders?page=' . $request->page, 'GET');
-        }
-        $request->headers->set('Accept', 'application/json');
-        $request->headers->set('Authorization', 'Bearer '.Session('user')['token']);
-        $res = app()->handle($request);
-        $profile_details = json_decode($res->getContent()); // convert to json object
 
-        return response()->json($profile_details);
+        !$request->page ? $ext = "/api/v1/orders" : $ext = "/api/v1/orders?page=" . $request->page;
+        $response = Http::withToken(Session('user')['token'])->get($this->api_site . $ext);
+        $data = json_decode($response->body());
+
+        return $data;
     }
 
     public function ordersProduct(Request $request){
-        if(!$request->product){
-            $request = Request::create($this->api_site . '/api/v1/orders', 'GET');
-        }else{
-            $request = Request::create($this->api_site . '/api/v1/orders/' . $request->product, 'GET');
-        }
-        $request->headers->set('Accept', 'application/json');
-        $request->headers->set('Authorization', 'Bearer '.Session('user')['token']);
-        $res = app()->handle($request);
-        $profile_details = json_decode($res->getContent()); // convert to json object
 
-        return response()->json($profile_details);
+        !$request->product ? $ext = "/api/v1/orders" : $ext = "/api/v1/orders/" . $request->product;
+        $response = Http::withToken(Session('user')['token'])->get($this->api_site . $ext);
+        $data = json_decode($response->body());
+
+        return $data;
     }
 
     public function saveOrder(Request $request){
@@ -72,11 +63,8 @@ class OrderController extends Controller
             'operations' => $operations
         ];
 
-        $request = Request::create($this->api_site . '/api/v1/orders', 'POST', $data);
-        $request->headers->set('Accept', 'application/json');
-        $request->headers->set('Authorization', 'Bearer '.Session('user')['token']);
-        $res = app()->handle($request);
-        $profile_details = json_decode($res->getContent()); // convert to json object
+        $response = Http::withToken(Session('user')['token'])->post($this->api_site . '/api/v1/orders', $data);
+        $data = json_decode($response->body());
 
 
         Alert::success('Operacion exitosa', 'La operacion se realizo de manera exitosa');

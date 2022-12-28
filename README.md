@@ -21,7 +21,7 @@ Tambien, necesitarás instalar Composer: https://getcomposer.org/doc/00-intro.md
 ## Instalación Laravel
 1. Descargue el zip del proyecto, luego copie y pegue en su carpeta de proyectos o installe el proyecto por linea de comando `https://github.com/kekknka/inventory.git`
 2. Asegúrese de tener Node y Composer instalados localmente.
-3.Ejecute el siguiente comando para descargar todas las dependencias del proyecto. `composer install`
+3. Ejecute el siguiente comando para descargar todas las dependencias del proyecto. `composer install`
 4. En su terminal, ejecute `npm install`
 5. Copie `.env.example` a `.env` y actualice las configuraciones (principalmente la configuración de la base de datos)
 6. En su terminal, ejecute `php artisan key:generate`
