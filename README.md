@@ -116,5 +116,22 @@ El esquema esta organizada de la siguiente manera, en caso de que quiera expandi
 
 <img width="25%" src="https://scontent.fgdl9-1.fna.fbcdn.net/v/t39.30808-6/322102648_2175632835942982_7402213592169369536_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_ohc=uwiYhwYSEOIAX_I_yGW&_nc_ht=scontent.fgdl9-1.fna&oh=00_AfDqrz2ay592BBpuE9KdjhOOv2-MiO7m0z8GvnnshLQTaw&oe=63B152C1" />
 
+## Vistas
+
+Login
+
+para entrar al sistema solo es necesario copiar el correo de un usuario dentro de nuestra base de datos y la contraseña es `password` para todos los usuarios
+
+<img src="https://scontent.fgdl9-1.fna.fbcdn.net/v/t39.30808-6/322663092_527516872742003_2493375480214473149_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=730e14&_nc_ohc=hfa9lqFWsSgAX_CREkp&_nc_ht=scontent.fgdl9-1.fna&oh=00_AfBQwLw75oLeNikp0tXbfLGfYmMZa7RvWABQ0hfA51APFQ&oe=63B06407" />
+
+Orders
+
+<img src="https://scontent.fgdl9-1.fna.fbcdn.net/v/t39.30808-6/322548479_548953543780075_7474387638525534318_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=730e14&_nc_ohc=hJiwJp7x4osAX-LkAoA&tn=T_1grpLqD31XIKfP&_nc_ht=scontent.fgdl9-1.fna&oh=00_AfD_lQZm3oVD8p7rUSvZBGy-MR0AY-3Wb69ZyB6pYto92w&oe=63B1B0FE" />
+
+Add Order
+
+<img src="https://scontent.fgdl9-1.fna.fbcdn.net/v/t39.30808-6/322674970_476692121084870_5722889110370102517_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=730e14&_nc_ohc=dSeq85N01BYAX_Jhppi&_nc_ht=scontent.fgdl9-1.fna&oh=00_AfDhSlUz4uB7TMrEx68Au5gcpVcuwFeTm3d1KvnViKjlwg&oe=63B016CB" />
+
+
 
 
