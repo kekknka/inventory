@@ -47,10 +47,48 @@ La base de datos cuenta con 5 tablas principales mas tablas adiciones que genera
 
 <h4>Rutas</h4>
 
-<table>
+<table width="100%">
     <tr>
         <th>Rutas</th>
-        <th>Metodo</th>
+        <th>Funcion</th>
+        <th>Token</th>
+        <th>Peticion</th>
+    </tr>
+    <tr>
+        <td>../api/login</td>
+        <td>Permite autentificarse y obtener un token para hacer uso de las siguientes apis</td>
+        <td>No</td>
+        <td>POST</td>
+    </tr>
+    <tr>
+        <td>../api/products</td>
+        <td>Obtenemos un volcado de todos los productos en la base de datos, de manera paginada, en caso de que noquiera la informacion paginada, basta con pasarle un [parametro] `paginate = false`</td>
+        <td>Si</td>
+        <td>GET</td>
+    </tr>
+    <tr>
+        <td>../api/products</td>
+        <td>Guardamos un nuevo producto</td>
+        <td>Si</td>
+        <td>POST</td>
+    </tr>
+    <tr>
+        <td>../api/products/{product}</td>
+        <td>Obtenemos un producto</td>
+        <td>Si</td>
+        <td>GET</td>
+    </tr>
+    <tr>
+        <td>../api/products/{product}</td>
+        <td>Actualizamos un producto</td>
+        <td>Si</td>
+        <td>PUT/PATCH</td>
+    </tr>
+    <tr>
+        <td>../api/products/{product}</td>
+        <td>Desactivamos un producto</td>
+        <td>Si</td>
+        <td>DELETE</td>
     </tr>
 </table>
 
@@ -58,7 +96,7 @@ La base de datos cuenta con 5 tablas principales mas tablas adiciones que genera
 
 El esquema esta organizada de la siguiente manera, en caso de que quiera expandir el aplicativo, todos los modulos se almacenaran en la carpeta `app` extendiendo de su archivo `layouts > dashboard.blade.php`
 
-<img width="25%" src="https://scontent.fgdl9-1.fna.fbcdn.net/v/t39.30808-6/322134930_525702056174267_3096215279232049008_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=iLQhiYFgn7AAX8gKmbm&_nc_ht=scontent.fgdl9-1.fna&oh=00_AfDN8ZiFcT5OQhpTtQDuVwmCBelHhtnfdoBNNxVsJwH5WQ&oe=63B0858A" />
+<img width="25%" src="https://scontent.fgdl9-1.fna.fbcdn.net/v/t39.30808-6/322102648_2175632835942982_7402213592169369536_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_ohc=uwiYhwYSEOIAX_I_yGW&_nc_ht=scontent.fgdl9-1.fna&oh=00_AfDqrz2ay592BBpuE9KdjhOOv2-MiO7m0z8GvnnshLQTaw&oe=63B152C1" />
 
 
 
