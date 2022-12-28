@@ -25,10 +25,11 @@ Tambien, necesitarás instalar Composer: https://getcomposer.org/doc/00-intro.md
 4. En su terminal, ejecute `npm install`
 5. Copie `.env.example` a `.env` y actualice las configuraciones (principalmente la configuración de la base de datos)
 6. En su terminal, ejecute `php artisan key:generate`
-8. Es necesario que ingrese la `url` base de su website local en el archivo `.env` en el parametro `API_SITE` con esta variable podremos lanzar peticiones a la api de nuestro proyecto
-    8.1. En caso de que use `Laragon` como su proveedor de servicio apache, basta con que especifique la direcciones de su url virtual generado por Laragon
-    8.2. En caso de que tenga algun otro proveedor como `XAMPP` basta con que especifiques la raiz del proyecto seguido del `public\index.php`
-7. Limpiamos route, cache, config, views ejecutando el siguiente comando `php artisan optimize`
+7. Es necesario que ingrese la `url` base de su website local en el archivo `.env` en el parametro `API_SITE` con esta variable podremos lanzar peticiones a la api de nuestro proyecto \n
+<small>En caso de que use `Laragon` como su proveedor de servicio apache, basta con que especifique la direcciones de su url virtual generado por Laragon</small><br>
+<small>En caso de que tenga algun otro proveedor como `XAMPP` basta con que especifiques la raiz del proyecto seguido del `public\index.php`</small>
+
+8. Limpiamos route, cache, config, views ejecutando el siguiente comando `php artisan optimize`
 9. Ejecute `php artesanal migrate --seed` para crear las tablas de la base de datos y sembrar las tablas de usuarios y productos, ademas de crear algunos registros de prueba
 10. En caso de que no tenga los assets en la carpeta public necesitara ejecutar el siguiente comando para visualizar la vistas `npm run dev` o `npm run build`
 
