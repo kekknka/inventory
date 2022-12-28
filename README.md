@@ -26,6 +26,7 @@ Este es un proyecto del framework Laravel 9 asi que necesitaras las siguientes v
  - PHP >= 8.0
  - Node.js >= 18
  - MySQL >= 8.0
+ 
 Tambien, necesitarás instalar Composer: https://getcomposer.org/doc/00-intro.md
 ## Laravel
 1. Download the project’s zip then copy and paste volt-dashboard-master folder in your projects folder. Rename the folder to your project’s name
