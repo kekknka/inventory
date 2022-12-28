@@ -18,16 +18,28 @@ Este es un proyecto del framework Laravel 9 asi que necesitaras las siguientes v
  - MySQL >= 8.0
 
 Tambien, necesitarás instalar Composer: https://getcomposer.org/doc/00-intro.md
-## Laravel
+## Instalación Laravel
 1. Descargue el zip del proyecto, luego copie y pegue en su carpeta de proyectos o installe el proyecto por linea de comando `https://github.com/kekknka/inventory.git`
 2. Asegúrese de tener Node y Composer instalados localmente.
 3.Ejecute el siguiente comando para descargar todas las dependencias del proyecto. `composer install`
 4. En su terminal, ejecute `npm install`
 5. Copie `.env.example` a `.env` y actualice las configuraciones (principalmente la configuración de la base de datos)
 6. En su terminal, ejecute `php artisan key:generate`
-7. Es necesario que ingrese la `url` base de su website local en el archivo `.env` en el parametro `API_SITE` con esta variable podremos lanzar peticiones a la api de nuestro proyecto \n
-<small>En caso de que use `Laragon` como su proveedor de servicio apache, basta con que especifique la direcciones de su url virtual generado por Laragon</small><br>
-<small>En caso de que tenga algun otro proveedor como `XAMPP` basta con que especifiques la raiz del proyecto seguido del `public\index.php`</small>
+7. Es necesario que ingrese la `url` base de su website local en el archivo `.env` en el parametro `API_SITE` con esta variable podremos lanzar peticiones a la api de nuestro proyecto, ejemplo:
+<table>
+    <tr>
+        <td>Proveedor</td>
+        <td>Ruta</td>
+    <tr>
+    <tr>
+        <td>Laragon</td>
+        <td>Http://myProject.test</td>
+    <tr>
+    <tr>
+        <td>XAMPP</td>
+        <td>C:\xampp\htdocs\myProject\public\index.php</td>
+    <tr>
+</table>
 
 8. Limpiamos route, cache, config, views ejecutando el siguiente comando `php artisan optimize`
 9. Ejecute `php artesanal migrate --seed` para crear las tablas de la base de datos y sembrar las tablas de usuarios y productos, ademas de crear algunos registros de prueba
