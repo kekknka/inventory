@@ -11,7 +11,7 @@
 
 Sistema de inventario con control de entradas y salidas y total de stock
 
-## Prerequisites
+## Prerequisitos
 Este es un proyecto del framework Laravel 9 asi que necesitaras las siguientes versiones:
  - PHP >= 8.0
  - Node.js >= 18
@@ -56,7 +56,7 @@ La base de datos cuenta con 5 tablas principales mas tablas adiciones que genera
     </tr>
     <tr>
         <td>../api/login</td>
-        <td>Permite autentificarse y obtener un token para hacer uso de las siguientes apis</td>
+        <td>Permite autentificarse y obtener un token para hacer uso de las siguientes apis (<a href="#login">Ver ejemplo</a>)</td>
         <td>No</td>
         <td>POST</td>
     </tr>
@@ -120,7 +120,7 @@ El esquema esta organizada de la siguiente manera, en caso de que quiera expandi
 
 Login
 
-para entrar al sistema solo es necesario copiar el correo de un usuario dentro de nuestra base de datos y la contraseña es `password` para todos los usuarios
+para entrar al sistema solo es necesario copiar el `email` de un usuario dentro de nuestra base de datos y la contraseña es `password` para todos los usuarios
 
 <img src="https://scontent.fgdl9-1.fna.fbcdn.net/v/t39.30808-6/322663092_527516872742003_2493375480214473149_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=730e14&_nc_ohc=hfa9lqFWsSgAX_CREkp&_nc_ht=scontent.fgdl9-1.fna&oh=00_AfBQwLw75oLeNikp0tXbfLGfYmMZa7RvWABQ0hfA51APFQ&oe=63B06407" />
 
@@ -131,6 +131,10 @@ Orders
 Add Order
 
 <img src="https://scontent.fgdl9-1.fna.fbcdn.net/v/t39.30808-6/322674970_476692121084870_5722889110370102517_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=730e14&_nc_ohc=dSeq85N01BYAX_Jhppi&_nc_ht=scontent.fgdl9-1.fna&oh=00_AfDhSlUz4uB7TMrEx68Au5gcpVcuwFeTm3d1KvnViKjlwg&oe=63B016CB" />
+
+## Ejemplos postman
+
+<img id="login" src="https://scontent.fgdl9-1.fna.fbcdn.net/v/t39.30808-6/321942198_2356129337887400_1192856794104471928_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=730e14&_nc_ohc=T_dgWa5dlTgAX_KwC5A&_nc_ht=scontent.fgdl9-1.fna&oh=00_AfD2NsWC2xj-9vG4esr7_6ZsDxCgM4ZXIqhOFJ-8HDRo4g&oe=63B0B2C7" />
 
 
 

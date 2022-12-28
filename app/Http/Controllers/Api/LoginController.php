@@ -31,7 +31,6 @@ class LoginController extends Controller
         return $request->validate([
             'email' =>'required|email',
             'password' =>'required|min:6',
-            'name' =>'required'
         ]);
     }
 }
