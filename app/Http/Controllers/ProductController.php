@@ -16,7 +16,7 @@ class ProductController extends Controller
 
     public function products(){
 
-        $response = Http::withToken(Session('user')['token'])->get($this->api_site . '/api/v1/products?paginate=false');
+        $response = Http::withToken(Session('user')['token'])->get($this->api_site . 'api/v1/products?paginate=false');
         $data = json_decode($response->body());
 
         return $data;

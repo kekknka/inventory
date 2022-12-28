@@ -34,7 +34,13 @@
         </nav>
     </header>
     <main>
-        {{ Illuminate\Mail\Markdown::parse(file_get_contents(base_path() . '/README.md')) }}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    {{ Illuminate\Mail\Markdown::parse(file_get_contents(base_path() . '/README.md')) }}
+                </div>
+            </div>
+        </div>
     </main>
     <footer></footer>
     @vite([

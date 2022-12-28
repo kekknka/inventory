@@ -16,7 +16,7 @@ class LoginController extends Controller
 
     public function login(Request $request){
 
-        $response = Http::post($this->api_site . '/api/login', [
+        $response = Http::post($this->api_site . 'api/login', [
             'email' => $request->email,
             'password' => $request->password,
             'name' => 'Alvera Eichmann'

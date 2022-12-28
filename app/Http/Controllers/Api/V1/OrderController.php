@@ -35,7 +35,6 @@ class OrderController extends Controller
         ->join('operations', 'operations.product_id', '=', 'products.id')
         ->join('orders', 'orders.id', '=', 'operations.order_id')
         ->join('operation_types', 'operation_types.id', '=' ,'operations.operation_type_id')
-        ->groupBy('operations.id')
         ->orderBy('operations.id', 'DESC')
         ->paginate(10);
 

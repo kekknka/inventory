@@ -9,7 +9,7 @@
 
 ## Sistema de inventario
 
-Sistema de inventario con control de entradas y salidas y total de stock
+Sistema de inventario desarrollado con el framework `Laravel 9` con control de entradas y salidas y total de stock
 
 ## Prerequisitos
 Este es un proyecto del framework Laravel 9 asi que necesitaras las siguientes versiones:
@@ -19,7 +19,7 @@ Este es un proyecto del framework Laravel 9 asi que necesitaras las siguientes v
 
 Tambien, necesitarás instalar Composer: https://getcomposer.org/doc/00-intro.md
 ## Instalación Laravel
-1. Descargue el zip del proyecto, luego copie y pegue en su carpeta de proyectos o installe el proyecto por linea de comando `https://github.com/kekknka/inventory.git`
+1. Descargue el zip del proyecto, luego copie y pegue en su carpeta de proyectos o instale el proyecto por linea de comando `https://github.com/kekknka/inventory.git`
 2. Asegúrese de tener Node y Composer instalados localmente.
 3. Ejecute el siguiente comando para descargar todas las dependencias del proyecto. `composer install`
 4. En su terminal, ejecute `npm install`
@@ -42,7 +42,7 @@ Tambien, necesitarás instalar Composer: https://getcomposer.org/doc/00-intro.md
 </table>
 
 8. Limpiamos route, cache, config, views ejecutando el siguiente comando `php artisan optimize`
-9. Ejecute `php artesanal migrate --seed` para crear las tablas de la base de datos y sembrar las tablas de usuarios y productos, ademas de crear algunos registros de prueba
+9. Ejecute `php artisan migrate --seed` para crear las tablas de la base de datos y sembrar las tablas de usuarios y productos, ademas de crear algunos registros de prueba
 10. En caso de que no tenga los assets en la carpeta public necesitara ejecutar el siguiente comando para visualizar la vistas `npm run dev` o `npm run build`
 
 ## Esquema de la base de datos
@@ -64,7 +64,7 @@ La base de datos cuenta con 5 tablas principales mas tablas adiciones que genera
 
 <h4>Rutas</h4>
 
-<table width="100%">
+<table width="100%" border="1">
     <tr>
         <th>Rutas</th>
         <th>Funcion</th>
@@ -139,32 +139,32 @@ Login
 
 para entrar al sistema solo es necesario copiar el `email` de un usuario dentro de nuestra base de datos y la contraseña es `password` para todos los usuarios
 
-<img src="https://scontent.fgdl9-1.fna.fbcdn.net/v/t39.30808-6/322663092_527516872742003_2493375480214473149_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=730e14&_nc_ohc=hfa9lqFWsSgAX_CREkp&_nc_ht=scontent.fgdl9-1.fna&oh=00_AfBQwLw75oLeNikp0tXbfLGfYmMZa7RvWABQ0hfA51APFQ&oe=63B06407" />
+<img class="img-fluid" src="https://scontent.fgdl9-1.fna.fbcdn.net/v/t39.30808-6/322663092_527516872742003_2493375480214473149_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=730e14&_nc_ohc=hfa9lqFWsSgAX_CREkp&_nc_ht=scontent.fgdl9-1.fna&oh=00_AfBQwLw75oLeNikp0tXbfLGfYmMZa7RvWABQ0hfA51APFQ&oe=63B06407" />
 
 Orders
 
-<img src="https://scontent.fgdl9-1.fna.fbcdn.net/v/t39.30808-6/322548479_548953543780075_7474387638525534318_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=730e14&_nc_ohc=hJiwJp7x4osAX-LkAoA&tn=T_1grpLqD31XIKfP&_nc_ht=scontent.fgdl9-1.fna&oh=00_AfD_lQZm3oVD8p7rUSvZBGy-MR0AY-3Wb69ZyB6pYto92w&oe=63B1B0FE" />
+<img class="img-fluid" src="https://scontent.fgdl9-1.fna.fbcdn.net/v/t39.30808-6/322548479_548953543780075_7474387638525534318_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=730e14&_nc_ohc=hJiwJp7x4osAX-LkAoA&tn=T_1grpLqD31XIKfP&_nc_ht=scontent.fgdl9-1.fna&oh=00_AfD_lQZm3oVD8p7rUSvZBGy-MR0AY-3Wb69ZyB6pYto92w&oe=63B1B0FE" />
 
 Add Order
 
-<img src="https://scontent.fgdl9-1.fna.fbcdn.net/v/t39.30808-6/322674970_476692121084870_5722889110370102517_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=730e14&_nc_ohc=dSeq85N01BYAX_Jhppi&_nc_ht=scontent.fgdl9-1.fna&oh=00_AfDhSlUz4uB7TMrEx68Au5gcpVcuwFeTm3d1KvnViKjlwg&oe=63B016CB" />
+<img class="img-fluid" src="https://scontent.fgdl9-1.fna.fbcdn.net/v/t39.30808-6/322674970_476692121084870_5722889110370102517_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=730e14&_nc_ohc=dSeq85N01BYAX_Jhppi&_nc_ht=scontent.fgdl9-1.fna&oh=00_AfDhSlUz4uB7TMrEx68Au5gcpVcuwFeTm3d1KvnViKjlwg&oe=63B016CB" />
 
 ## Ejemplos postman
 
 ../api/login
 
-<img id="login" src="https://scontent.fgdl9-1.fna.fbcdn.net/v/t39.30808-6/321942198_2356129337887400_1192856794104471928_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=730e14&_nc_ohc=T_dgWa5dlTgAX_KwC5A&_nc_ht=scontent.fgdl9-1.fna&oh=00_AfD2NsWC2xj-9vG4esr7_6ZsDxCgM4ZXIqhOFJ-8HDRo4g&oe=63B0B2C7" />
+<img class="img-fluid" id="login" src="https://scontent.fgdl9-1.fna.fbcdn.net/v/t39.30808-6/321942198_2356129337887400_1192856794104471928_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=730e14&_nc_ohc=T_dgWa5dlTgAX_KwC5A&_nc_ht=scontent.fgdl9-1.fna&oh=00_AfD2NsWC2xj-9vG4esr7_6ZsDxCgM4ZXIqhOFJ-8HDRo4g&oe=63B0B2C7" />
 
 ../api/v1/products
 
-<img id="getProducts" src="https://scontent.fgdl9-1.fna.fbcdn.net/v/t39.30808-6/322598726_826706558557696_749245033962866152_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=730e14&_nc_ohc=Yusyypzb1fsAX8cwZYy&_nc_ht=scontent.fgdl9-1.fna&oh=00_AfDYN5CoP9ACJtifs3Vw1zVdmfYuaVJKMivMWIDt86LuWQ&oe=63B15756" alt="">
+<img class="img-fluid" id="getProducts" src="https://scontent.fgdl9-1.fna.fbcdn.net/v/t39.30808-6/322598726_826706558557696_749245033962866152_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=730e14&_nc_ohc=Yusyypzb1fsAX8cwZYy&_nc_ht=scontent.fgdl9-1.fna&oh=00_AfDYN5CoP9ACJtifs3Vw1zVdmfYuaVJKMivMWIDt86LuWQ&oe=63B15756" alt="">
 
 ../api/v1/orders
 
-<img id="getOrders" src="https://scontent.fgdl9-1.fna.fbcdn.net/v/t39.30808-6/322059191_884567892567382_2709355708449576888_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=730e14&_nc_ohc=kgnSdVsGsqwAX_wwBaA&_nc_ht=scontent.fgdl9-1.fna&oh=00_AfCFIH8R5sgfHVG52e5i7POwFPhSgZ3MckkxrlBG8RV7ig&oe=63B14C27" alt="">
+<img class="img-fluid" id="getOrders" src="https://scontent.fgdl9-1.fna.fbcdn.net/v/t39.30808-6/322059191_884567892567382_2709355708449576888_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=730e14&_nc_ohc=kgnSdVsGsqwAX_wwBaA&_nc_ht=scontent.fgdl9-1.fna&oh=00_AfCFIH8R5sgfHVG52e5i7POwFPhSgZ3MckkxrlBG8RV7ig&oe=63B14C27" alt="">
 
 ../api/v1/orders [POST]
 
-<img id="postOrders" src="https://scontent.fgdl9-1.fna.fbcdn.net/v/t39.30808-6/322568899_4004688639783755_1262459644198538947_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=730e14&_nc_ohc=pLh_old9V9AAX85EODh&_nc_oc=AQlFZ41b6hLp8fNcV3KeO3SVROujs_VHJUyF-NQa03qYS2ZctIwrOH8dI7xjthl1Ba4sP5BTW5pEpgezd1FYIHm6&tn=T_1grpLqD31XIKfP&_nc_ht=scontent.fgdl9-1.fna&oh=00_AfAk7eQIO7QVzJswi7OHc30N6hdCqw0a4zz0sJGejFNZNg&oe=63B0161C" alt="">
+<img class="img-fluid" id="postOrders" src="https://scontent.fgdl9-1.fna.fbcdn.net/v/t39.30808-6/322568899_4004688639783755_1262459644198538947_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=730e14&_nc_ohc=pLh_old9V9AAX85EODh&_nc_oc=AQlFZ41b6hLp8fNcV3KeO3SVROujs_VHJUyF-NQa03qYS2ZctIwrOH8dI7xjthl1Ba4sP5BTW5pEpgezd1FYIHm6&tn=T_1grpLqD31XIKfP&_nc_ht=scontent.fgdl9-1.fna&oh=00_AfAk7eQIO7QVzJswi7OHc30N6hdCqw0a4zz0sJGejFNZNg&oe=63B0161C" alt="">
 
 
