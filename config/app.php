@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Facade;
 
 return [
 
+    'api_site' => env('API_SITE', 'http://localhost'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Name

@@ -6,9 +6,16 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
+    public $api_site;
+
+    public function __construct(){
+        $this->api_site = config('app.api_site');
+    }
+
+
     public function products(){
 
-        $request = Request::create('https://inventory.loc.com/api/v1/products?paginate=false', 'GET');
+        $request = Request::create($this->api_site . '/api/v1/products?paginate=false', 'GET');
         $request->headers->set('Accept', 'application/json');
         $request->headers->set('Authorization', 'Bearer '.Session('user')['token']);
         $res = app()->handle($request);

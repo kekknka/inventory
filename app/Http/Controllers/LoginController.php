@@ -8,9 +8,15 @@ use Illuminate\Support\Facades\Http;
 
 class LoginController extends Controller
 {
+    public $api_site;
+
+    public function __construct(){
+        $this->api_site = config('app.api_site');
+    }
+
     public function login(Request $request){
 
-        $response = Http::post('http://inventory.loc.com/api/login', [
+        $response = Http::post($this->api_site . '/api/login', [
             'email' => $request->email,
             'password' => $request->password,
             'name' => 'Alvera Eichmann'
