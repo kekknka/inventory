@@ -90,6 +90,24 @@ La base de datos cuenta con 5 tablas principales mas tablas adiciones que genera
         <td>Si</td>
         <td>DELETE</td>
     </tr>
+    <tr>
+        <td>../api/orders</td>
+        <td>Obtenemos un volcado de todas las entradas y salidas asi como el ultimo stock</td>
+        <td>Si</td>
+        <td>GET</td>
+    </tr>
+    <tr>
+        <td>../api/orders</td>
+        <td>Agregamos una nueva entrada/salida</td>
+        <td>Si</td>
+        <td>POST</td>
+    </tr>
+    <tr>
+        <td>../api/orders/{order}</td>
+        <td>Obtenemos el historial de entrada y salida de un producto</td>
+        <td>Si</td>
+        <td>GET</td>
+    </tr>
 </table>
 
 ## Esquema archivos
