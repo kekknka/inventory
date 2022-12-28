@@ -26,21 +26,21 @@ Tambien, necesitarás instalar Composer: https://getcomposer.org/doc/00-intro.md
 5. Copie `.env.example` a `.env` y actualice las configuraciones (principalmente la configuración de la base de datos)
 6. En su terminal, ejecute `php artisan key:generate`
 7. Es necesario que ingrese la `url` base de su website local en el archivo `.env` en el parametro `API_SITE` con esta variable podremos lanzar peticiones a la api de nuestro proyecto, ejemplo:
-<table>
+<table border="1">
     <tr>
         <td>Proveedor</td>
         <td>Ruta</td>
     <tr>
     <tr>
         <td>Laragon</td>
-        <td>Http://myProject.test</td>
+        <td>API_SITE=Http://dominio.test/</td>
     <tr>
     <tr>
         <td>XAMPP</td>
-        <td>C:\xampp\htdocs\myProject\public\index.php</td>
+        <td>En el caso de XAMPP es necesario tener un dominio virtual creado, por que algunas peticiones con axios hace referencia algunas rutas de nuestro proyectos (<a href="#dominiovirtual">Como crear dominio virtual en XAMPP</a></td>
     <tr>
 </table>
-
+<br>
 8. Limpiamos route, cache, config, views ejecutando el siguiente comando `php artisan optimize`
 9. Ejecute `php artisan migrate --seed` para crear las tablas de la base de datos y sembrar las tablas de usuarios y productos, ademas de crear algunos registros de prueba
 10. En caso de que no tenga los assets en la carpeta public necesitara ejecutar el siguiente comando para visualizar la vistas `npm run dev` o `npm run build`
@@ -166,5 +166,39 @@ Add Order
 ../api/v1/orders [POST]
 
 <img class="img-fluid" id="postOrders" src="https://scontent.fgdl9-1.fna.fbcdn.net/v/t39.30808-6/322568899_4004688639783755_1262459644198538947_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=730e14&_nc_ohc=pLh_old9V9AAX85EODh&_nc_oc=AQlFZ41b6hLp8fNcV3KeO3SVROujs_VHJUyF-NQa03qYS2ZctIwrOH8dI7xjthl1Ba4sP5BTW5pEpgezd1FYIHm6&tn=T_1grpLqD31XIKfP&_nc_ht=scontent.fgdl9-1.fna&oh=00_AfAk7eQIO7QVzJswi7OHc30N6hdCqw0a4zz0sJGejFNZNg&oe=63B0161C" alt="">
+
+## Crear dominio virtual
+<div id="dominiovirtual"></div>
+Configuración de fichero hosts
+Si queremos configurar nuestro servidor virtual en XAMPP para que siga la misma estructura de clases al estilo www.dominio.local, lo primero que tendremos que hacer es configurar la resolución del nombre www.dominio.local para que cuando el navegador quiera conectarse a ese dominio lo haga a nuestro servidor web local en 127.0.0.1
+
+Para ello en Windows 8.1 tendremos que editar el fichero hosts.
+
+1. Accederemos a la carpeta: C:\Windows\System32\drivers\etc
+2. Copiaremos el fichero hosts al escritorio y lo editaremos.
+3. Añadiremos la siguiente entrada al final del fichero: 127.0.0.1 www.dominio.local
+4. Grabamos el fichero y lo pegaremos de nuevo en la carpeta: C:\Windows\System32\drivers\etc sobreescribiendo el actual.
+5. A partir de este momento cuando queramos acceder al www.dominio.local nuestro equipo se conectará a nuestro servidor localhost.
+
+```
+# localhost name resolution is handled within DNS itself.
+127.0.0.1       localhost
+127.0.0.1       www.dominio.local
+```
+
+Creación del servidor virtual www.dominio.local en Apache y XAMPP
+Lo que nos falta por hacer ahora es que cuando escribamos la url http://www.dominio.local el XAMPP nos muestre el contenido de nuestras páginas web.
+
+
+1. Editaremos el fichero httpd-vhosts.conf que se encuentra en la carpeta \xampp\apache\conf\extra\httpd-vhosts.conf
+2. Añadiremos las siguientes instrucciones al final del fichero adaptando las rutas y letras de unidad a nuestra propia configuración:
+
+```
+<VirtualHost *:80>
+    DocumentRoot "D:/xampp/htdocs/dominio/public/index.php"
+    ServerName www.dominio.local
+</VirtualHost>
+```
+
 
 
