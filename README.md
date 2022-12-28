@@ -45,4 +45,20 @@ La base de datos cuenta con 5 tablas principales mas tablas adiciones que genera
 
 ## Api
 
+<h4>Rutas</h4>
+
+<table>
+    <tr>
+        <th>Rutas</th>
+        <th>Metodo</th>
+    </tr>
+</table>
+
+## Esquema archivos
+
+El esquema esta organizada de la siguiente manera, en caso de que quiera expandir el aplicativo, todos los modulos se almacenaran en la carpeta `app` extendiendo de su archivo `layouts > dashboard.blade.php`
+
+<img width="25%" src="https://scontent.fgdl9-1.fna.fbcdn.net/v/t39.30808-6/322134930_525702056174267_3096215279232049008_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=iLQhiYFgn7AAX8gKmbm&_nc_ht=scontent.fgdl9-1.fna&oh=00_AfDN8ZiFcT5OQhpTtQDuVwmCBelHhtnfdoBNNxVsJwH5WQ&oe=63B0858A" />
+
+
 
