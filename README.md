@@ -7,77 +7,32 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## Sistema de inventario
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Sistema de inventario con control de entradas y salidas y total de stock
 
 ## Prerequisites
 Este es un proyecto del framework Laravel 9 asi que necesitaras las siguientes versiones:
  - PHP >= 8.0
  - Node.js >= 18
  - MySQL >= 8.0
- 
+
 Tambien, necesitarás instalar Composer: https://getcomposer.org/doc/00-intro.md
 ## Laravel
-1. Download the project’s zip then copy and paste volt-dashboard-master folder in your projects folder. Rename the folder to your project’s name
-2. Make sure you have Node and Composer locally installed.
-3.Run the following command in order to download all the project dependencies. `composer install`
-4. In your terminal run `npm install`
-5. Copy `.env.example` to `.env` and updated the configurations (mainly the database configuration)
-6. In your terminal run `php artisan key:generate`
-7. Run `php artisan migrate --seed` to create the database tables and seed the roles and users tables
-8. Run `php artisan storage:link` to create the storage symlink (if you are using **Vagrant** with **Homestead** for development, remember to ssh into your virtual machine and run the command from there).
+1. Descargue el zip del proyecto, luego copie y pegue la carpeta volt-dashboard-master en su carpeta de proyectos. Cambie el nombre de la carpeta al nombre de su proyecto
+2. Asegúrese de tener Node y Composer instalados localmente.
+3.Ejecute el siguiente comando para descargar todas las dependencias del proyecto. `composer install`
+4. En su terminal, ejecute `npm install`
+5. Copie `.env.example` a `.env` y actualice las configuraciones (principalmente la configuración de la base de datos)
+6. En su terminal, ejecute `php artisan key:generate`
+7. Ejecute `php artesanal migrate --seed` para crear las tablas de la base de datos y sembrar las tablas de usuarios y productos, ademas de crear algunos registros de prueba
+8. En caso de que no tenga los assets en la carpeta public necesitara ejecutar el siguiente comando para visualizar la vistas `npm run dev`
 
-## Learning Laravel
+## Esquema de la base de datos
+La base de datos cuenta con 5 tablas principales mas tablas adiciones que genera laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+<img src="https://scontent.fgdl9-1.fna.fbcdn.net/v/t39.30808-6/322159866_1139073429925396_6253785192699770439_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_ohc=YEj0m-rYW3sAX_Mdscy&_nc_ht=scontent.fgdl9-1.fna&oh=00_AfDq3QL0H-vu68KSCQvgWUEHRq5bGm0n0kNSjPcJC9GcDw&oe=63AFD97D" />
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Api
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
