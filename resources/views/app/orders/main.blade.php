@@ -24,7 +24,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <table id="myTable" class="table table-bordered">
+                        <table id="myTable" class="table table-responsive table-bordered">
                             <thead>
                                 <tr>
                                     <th>Producto Folio</th>

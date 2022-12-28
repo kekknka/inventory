@@ -13,13 +13,14 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-8">
-                            <div class="form-inline">
-                                <div class="form-group">
-                                    <label for="inputPassword2" class="sr-only">Productos</label>
+                            <div class="form-row">
+                                <div class="col">
                                     <select class="form-control form-control-sm" name="" id="sltProducts"></select>
-                                  </div>
-                                <button type="button" id="btnAddProduct" class="btn btn-sm btn-primary mb-2">Agregar</button>
                                 </div>
+                                <div class="col">
+                                    <button type="button" id="btnAddProduct" class="btn btn-sm btn-primary mb-2">Agregar</button>
+                                </div>
+                            </div>
                             <table id="tableProducts" class="table table-bordered">
                                 <thead>
                                     <tr>
@@ -61,7 +62,6 @@
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-primary">Guardar Operación</button>
-                    <input type="submit" value="prueba">
                 </div>
             </form>
         </div>

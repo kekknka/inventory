@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use datatables;
+use RealRashid\SweetAlert\Facades\Alert as Alert;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
@@ -36,6 +37,11 @@ class OrderController extends Controller
     }
 
     public function saveOrder(Request $request){
+        if($request->quantity == null){
+            Alert::warning('Error en la operacion', 'No se agregaron productos');
+            return redirect()->back();
+        }
+
         $order = [
             'subtotal'          => $request->subtotal,
             'discount'          => $request->discount,
@@ -66,7 +72,7 @@ class OrderController extends Controller
         $profile_details = json_decode($res->getContent()); // convert to json object
 
 
-
+        Alert::success('Operacion exitosa', 'La operacion se realizo de manera exitosa');
         return redirect()->route('dashboard');
     }
 }
