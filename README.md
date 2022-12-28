@@ -41,6 +41,7 @@ Tambien, necesitarás instalar Composer: https://getcomposer.org/doc/00-intro.md
     <tr>
 </table>
 <br>
+
 8. Limpiamos route, cache, config, views ejecutando el siguiente comando `php artisan optimize`
 9. Ejecute `php artisan migrate --seed` para crear las tablas de la base de datos y sembrar las tablas de usuarios y productos, ademas de crear algunos registros de prueba
 10. En caso de que no tenga los assets en la carpeta public necesitara ejecutar el siguiente comando para visualizar la vistas `npm run dev` o `npm run build`
