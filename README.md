@@ -172,12 +172,12 @@ Add Order
 Configuración de fichero hosts
 Si queremos configurar nuestro servidor virtual en XAMPP para que siga la misma estructura de clases al estilo www.dominio.local, lo primero que tendremos que hacer es configurar la resolución del nombre www.dominio.local para que cuando el navegador quiera conectarse a ese dominio lo haga a nuestro servidor web local en 127.0.0.1
 
-Para ello en Windows 8.1 tendremos que editar el fichero hosts.
+Para ello tendremos que editar el fichero hosts.
 
-1. Accederemos a la carpeta: C:\Windows\System32\drivers\etc
+1. Accederemos a la carpeta: `C:\Windows\System32\drivers\etc`
 2. Copiaremos el fichero hosts al escritorio y lo editaremos.
-3. Añadiremos la siguiente entrada al final del fichero: 127.0.0.1 www.dominio.local
-4. Grabamos el fichero y lo pegaremos de nuevo en la carpeta: C:\Windows\System32\drivers\etc sobreescribiendo el actual.
+3. Añadiremos la siguiente entrada al final del fichero: `127.0.0.1 www.dominio.local`
+4. Grabamos el fichero y lo pegaremos de nuevo en la carpeta: `C:\Windows\System32\drivers\etc` sobreescribiendo el actual.
 5. A partir de este momento cuando queramos acceder al www.dominio.local nuestro equipo se conectará a nuestro servidor localhost.
 
 ```
@@ -190,7 +190,7 @@ Creación del servidor virtual www.dominio.local en Apache y XAMPP
 Lo que nos falta por hacer ahora es que cuando escribamos la url http://www.dominio.local el XAMPP nos muestre el contenido de nuestras páginas web.
 
 
-1. Editaremos el fichero httpd-vhosts.conf que se encuentra en la carpeta \xampp\apache\conf\extra\httpd-vhosts.conf
+1. Editaremos el fichero httpd-vhosts.conf que se encuentra en la carpeta `\xampp\apache\conf\extra\httpd-vhosts.conf`
 2. Añadiremos las siguientes instrucciones al final del fichero adaptando las rutas y letras de unidad a nuestra propia configuración:
 
 ```
