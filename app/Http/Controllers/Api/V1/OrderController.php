@@ -117,7 +117,6 @@ class OrderController extends Controller
         ->join('operation_types', 'operation_types.id', '=' ,'operations.operation_type_id')
         ->where('products.SKU', $item)
         ->orWhere('products.name', $item)
-        ->groupBy('operations.id')
         ->orderBy('operations.id', 'DESC')
         ->paginate(10);
 
