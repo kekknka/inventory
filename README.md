@@ -21,6 +21,22 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
+## Prerequisites
+Este es un proyecto del framework Laravel 9 asi que necesitaras las siguientes versiones:
+ - PHP >= 8.0
+ - Node.js >= 18
+ - MySQL >= 8.0
+Tambien, necesitarás instalar Composer: https://getcomposer.org/doc/00-intro.md
+## Laravel
+1. Download the project’s zip then copy and paste volt-dashboard-master folder in your projects folder. Rename the folder to your project’s name
+2. Make sure you have Node and Composer locally installed.
+3.Run the following command in order to download all the project dependencies. `composer install`
+4. In your terminal run `npm install`
+5. Copy `.env.example` to `.env` and updated the configurations (mainly the database configuration)
+6. In your terminal run `php artisan key:generate`
+7. Run `php artisan migrate --seed` to create the database tables and seed the roles and users tables
+8. Run `php artisan storage:link` to create the storage symlink (if you are using **Vagrant** with **Homestead** for development, remember to ssh into your virtual machine and run the command from there).
+
 ## Learning Laravel
 
 Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.

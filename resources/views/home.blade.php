@@ -33,7 +33,9 @@
             </div>
         </nav>
     </header>
-    <main></main>
+    <main>
+        {{ Illuminate\Mail\Markdown::parse(file_get_contents(base_path() . '/README.md')) }}
+    </main>
     <footer></footer>
     @vite([
     'resources/js/app.js'
