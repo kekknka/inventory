@@ -31,7 +31,17 @@ Tambien, necesitarás instalar Composer: https://getcomposer.org/doc/00-intro.md
 ## Esquema de la base de datos
 La base de datos cuenta con 5 tablas principales mas tablas adiciones que genera laravel
 
-<img src="https://scontent.fgdl9-1.fna.fbcdn.net/v/t39.30808-6/322159866_1139073429925396_6253785192699770439_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_ohc=YEj0m-rYW3sAX_Mdscy&_nc_ht=scontent.fgdl9-1.fna&oh=00_AfDq3QL0H-vu68KSCQvgWUEHRq5bGm0n0kNSjPcJC9GcDw&oe=63AFD97D" />
+ - failed_jobs
+ - migrations
+ - operation_types
+ - operations
+ - orders
+ - password_resets
+ - personal_access_tokens
+ - products
+ - users
+
+<img width="50%" src="https://scontent.fgdl9-1.fna.fbcdn.net/v/t39.30808-6/322159866_1139073429925396_6253785192699770439_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_ohc=YEj0m-rYW3sAX_Mdscy&_nc_ht=scontent.fgdl9-1.fna&oh=00_AfDq3QL0H-vu68KSCQvgWUEHRq5bGm0n0kNSjPcJC9GcDw&oe=63AFD97D" />
 
 ## Api
 
