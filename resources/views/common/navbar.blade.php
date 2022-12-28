@@ -30,13 +30,13 @@
                 <span class="menu-title">Operaciones</span>
             </a>
         </li>
-        <li class="nav-item">
+        <!--<li class="nav-item">
             <a class="nav-link" href="index.html">
                 <i class="menu-icon">
                     <ion-icon name="pricetags-outline"></ion-icon>
                 </i>
                 <span class="menu-title">Productos</span>
             </a>
-        </li>
+        </li>-->
     </ul>
 </nav>
